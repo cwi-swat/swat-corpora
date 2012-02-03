@@ -1,0 +1,4 @@
+distributions/: contains the extracted sources of distributions, as they
+have been literally found on the web
+builds/: contains the project/build environment to build each of the
+distributions
