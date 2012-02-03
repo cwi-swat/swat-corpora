@@ -18,12 +18,12 @@
 		<link>
 			<name>classes</name>
 			<type>2</type>
-			<location>./src/apache-ant-1.8.2/build/classes</location>
+			<locationURI>src/apache-ant-1.8.2/build/classes</locationURI>
 		</link>
 		<link>
 			<name>main</name>
 			<type>2</type>
-			<location>./src/apache-ant-1.8.2/src/main</location>
+			<locationURI>src/apache-ant-1.8.2/src/main</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
