@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" output="classes" path="main"/>
+	<classpathentry kind="src" path="src/src/main"/>
 	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/bcel"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="./lib/mail.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/xml-commons-external-1.4.01"/>
-	<classpathentry kind="lib" path="./lib/resolver.jar"/>
-	<classpathentry kind="lib" path="./lib/bsf.jar"/>
-	<classpathentry kind="lib" path="./lib/commons-logging-1.1.1.jar"/>
-	<classpathentry kind="lib" path="./lib/jsch-0.1.45.jar"/>
-	<classpathentry kind="lib" path="./lib/NetRexxC.jar"/>
+	<classpathentry kind="lib" path="lib/mail.jar"/>
+	<classpathentry kind="lib" path="lib/resolver.jar"/>
+	<classpathentry kind="lib" path="lib/bsf.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/jsch-0.1.45.jar"/>
+	<classpathentry kind="lib" path="lib/NetRexxC.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="./lib/commons-net-1.4.1.jar"/>
-	<classpathentry kind="lib" path="./lib/xalan.jar"/>
-	<classpathentry kind="lib" path="./lib/jdepend-2.9.1.jar"/>
-	<classpathentry kind="lib" path="./lib/log4j-1.2.16.jar"/>
-	<classpathentry kind="lib" path="./lib/jakarta-oro-2.0.7.jar"/>
+	<classpathentry kind="lib" path="lib/commons-net-1.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/xalan.jar"/>
+	<classpathentry kind="lib" path="lib/jdepend-2.9.1.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta-oro-2.0.7.jar"/>
+	<classpathentry kind="lib" path="lib/bcel-5.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
