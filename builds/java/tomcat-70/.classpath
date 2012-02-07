@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="classes" path="java"/>
+	<classpathentry kind="var" path="JRE_LIB" sourcepath="JRE_SRC"/>
+	<classpathentry kind="lib" path="/Users/migod/Rascal/share/ecj-3.7/ecj-3.7.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/apache-ant"/>
+	<classpathentry kind="lib" path="/Users/migod/Rascal/mccabe/j2ee-1.4.jar"/>
+	<classpathentry kind="lib" path="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar"/>
+	<classpathentry kind="lib" path="/Users/migod/Rascal/mccabe/wsdl4j.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
