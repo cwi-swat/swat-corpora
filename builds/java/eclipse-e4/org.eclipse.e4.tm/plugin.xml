@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.4 2010/03/18 10:24:56 htraetteb Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="platform:/plugin/org.eclipse.e4.tm/model/tm/widgets.ecore" 
+            class="org.eclipse.e4.tm.widgets.impl.WidgetsPackageImpl"
+            genModel="model/tm/widgets.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="platform:/plugin/org.eclipse.e4.tm/model/tm/styles.ecore"
+            class="org.eclipse.e4.tm.styles.impl.StylesPackageImpl"
+            genModel="model/tm/styles.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package 
+            uri="platform:/plugin/org.eclipse.e4.tm/model/tm/layouts.ecore"
+            class="org.eclipse.e4.tm.layouts.impl.LayoutsPackageImpl"
+            genModel="model/tm/layouts.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="platform:/plugin/org.eclipse.e4.tm/model/tm/util.ecore"
+            class="org.eclipse.e4.tm.util.impl.UtilPackageImpl"
+            genModel="model/tm/util.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="platform:/plugin/org.eclipse.e4.tm/model/swt/widgets.ecore"
+            class="org.eclipse.e4.tm.swt.widgets.impl.WidgetsPackageImpl"
+            genModel="model/swt/widgets.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="platform:/plugin/org.eclipse.e4.tm/model/swt/styles.ecore"
+            class="org.eclipse.e4.tm.swt.styles.impl.StylesPackageImpl"
+            genModel="model/swt/styles.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="platform:/plugin/org.eclipse.e4.tm/model/swt/layouts.ecore"
+            class="org.eclipse.e4.tm.swt.layouts.impl.LayoutsPackageImpl"
+            genModel="model/swt/layouts.genmodel"/>
+   </extension>
+
+</plugin>

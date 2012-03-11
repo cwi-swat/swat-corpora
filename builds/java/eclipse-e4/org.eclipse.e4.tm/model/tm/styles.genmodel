@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.e4.tm/src"
+    editDirectory="" editorDirectory="" modelPluginID="org.eclipse.e4.tm" modelName="Styles"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>styles.ecore</foreignModel>
+  <genPackages prefix="Styles" basePackage="org.eclipse.e4.tm" disposableProviderFactory="true"
+      ecorePackage="styles.ecore#/">
+    <genClasses image="false" ecoreClass="styles.ecore#//StyleItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute styles.ecore#//StyleItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute styles.ecore#//StyleItem/source"/>
+    </genClasses>
+    <genClasses ecoreClass="styles.ecore#//StyleSelector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute styles.ecore#//StyleSelector/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute styles.ecore#//StyleSelector/selector"/>
+    </genClasses>
+    <genClasses ecoreClass="styles.ecore#//Style">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute styles.ecore#//Style/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference styles.ecore#//Style/styleItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference styles.ecore#//Style/styleSelectors"/>
+    </genClasses>
+    <genClasses ecoreClass="styles.ecore#//Styled">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute styles.ecore#//Styled/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute styles.ecore#//Styled/role"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference styles.ecore#//Styled/style"/>
+    </genClasses>
+    <genClasses ecoreClass="styles.ecore#//ColorItem"/>
+    <genClasses ecoreClass="styles.ecore#//ImageItem"/>
+    <genClasses ecoreClass="styles.ecore#//FontItem"/>
+  </genPackages>
+</genmodel:GenModel>

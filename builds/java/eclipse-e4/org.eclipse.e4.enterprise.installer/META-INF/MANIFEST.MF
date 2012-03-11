@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Installer Plug-in
+Bundle-SymbolicName: org.eclipse.e4.enterprise.installer
+Bundle-Version: 4.6.2.qualifier
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.2.0,9.9.9)",
+ org.eclipse.e4.core.metaconfig;bundle-version="4.0.0",
+ org.eclipse.update.core;bundle-version="[3.2.0,9.9.9)",
+ org.eclipse.update.configurator;bundle-version="[3.2.0,9.9.9)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.e4.enterprise.installer,
+ org.eclipse.e4.enterprise.installer.internal.site
+Bundle-Activator: org.eclipse.e4.enterprise.installer.Activator

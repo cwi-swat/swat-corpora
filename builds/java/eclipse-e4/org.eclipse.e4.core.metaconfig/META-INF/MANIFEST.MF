@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Configuration Framework Plug-in
+Bundle-SymbolicName: org.eclipse.e4.core.metaconfig;singleton:=true
+Bundle-Version: 4.6.0.qualifier
+Bundle-Activator: org.eclipse.e4.core.metaconfig.Activator
+Require-Bundle: org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.e4.core.metaconfig
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

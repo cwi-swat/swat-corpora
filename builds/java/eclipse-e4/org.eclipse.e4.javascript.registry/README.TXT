@@ -1,0 +1,1 @@
+This bundle is inactive as it has been renamed. All activity is now moved to org.eclipse.e4.languages.javascript.registry

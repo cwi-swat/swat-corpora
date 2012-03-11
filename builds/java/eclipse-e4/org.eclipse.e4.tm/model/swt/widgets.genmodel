@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.e4.tm/src"
+    editDirectory="" editorDirectory="" modelPluginID="org.eclipse.e4.tm" modelName="Widgets"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    usedGenPackages="../tm/layouts.genmodel#//layouts ../tm/styles.genmodel#//styles ../tm/util.genmodel#//util ../tm/widgets.genmodel#//widgets">
+  <foreignModel>widgets.ecore</foreignModel>
+  <genPackages prefix="Widgets" basePackage="org.eclipse.e4.tm.swt" disposableProviderFactory="true"
+      ecorePackage="widgets.ecore#/">
+    <genClasses ecoreClass="widgets.ecore#//Slider"/>
+    <genClasses ecoreClass="widgets.ecore#//Spinner"/>
+    <genClasses ecoreClass="widgets.ecore#//Scale"/>
+  </genPackages>
+</genmodel:GenModel>

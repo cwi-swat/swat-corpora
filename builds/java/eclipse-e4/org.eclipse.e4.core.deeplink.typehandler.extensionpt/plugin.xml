@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="deepLinkExtensionPointInstanceHandler"  name="Entry Point for a Deep Linked Application" schema="schema/deepLinkExtensionPointInstanceHandler.exsd"/>
+   <extension
+         point="org.eclipse.e4.core.deeplink.handler.deepLinkTypeHandler">
+      <typeHandler
+            class="org.eclipse.e4.core.deeplink.typehandler.extensionpt.DeepLinkExtensionPointTypeHandler"
+            name="extensionpt">
+      </typeHandler>
+   </extension>
+</plugin>

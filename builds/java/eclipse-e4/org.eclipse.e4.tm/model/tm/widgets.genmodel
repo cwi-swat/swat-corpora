@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.e4.tm/src"
+    editDirectory="" editorDirectory="" modelPluginID="org.eclipse.e4.tm" modelName="Widgets"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    usedGenPackages="layouts.genmodel#//layouts styles.genmodel#//styles util.genmodel#//util">
+  <foreignModel>widgets.ecore</foreignModel>
+  <genPackages prefix="Widgets" basePackage="org.eclipse.e4.tm" disposableProviderFactory="true"
+      ecorePackage="widgets.ecore#/">
+    <genDataTypes ecoreDataType="widgets.ecore#//RuntimeEvent"/>
+    <genClasses image="false" ecoreClass="widgets.ecore#//Control">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference widgets.ecore#//Control/composite"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Control/enabled"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Control/visible"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//Control/layoutData"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Control/toolTip"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//Label"/>
+    <genClasses ecoreClass="widgets.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Text/editable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Text/modify"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Text/keyUp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Text/text"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="widgets.ecore#//List">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//List/items"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//SingleSelectionList"/>
+    <genClasses ecoreClass="widgets.ecore#//ComboBox"/>
+    <genClasses ecoreClass="widgets.ecore#//MultipleSelectionList"/>
+    <genClasses ecoreClass="widgets.ecore#//Browser">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Browser/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Browser/url"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Browser/text"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="widgets.ecore#//Button">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//Button/selectionEvent"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//PushButton"/>
+    <genClasses ecoreClass="widgets.ecore#//CheckBox">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//CheckBox/selection"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//ToggleButton">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//ToggleButton/selection"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="widgets.ecore#//BoundedValueControl">
+      <genTypeParameters ecoreTypeParameter="widgets.ecore#//BoundedValueControl/T"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//BoundedValueControl/minimum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//BoundedValueControl/maximum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//BoundedValueControl/valueEvent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//BoundedValueControl/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="widgets.ecore#//AbstractComposite">
+      <genTypeParameters ecoreTypeParameter="widgets.ecore#//AbstractComposite/T"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//AbstractComposite/controls"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//AbstractComposite/styles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//AbstractComposite/layout"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//Composite"/>
+    <genClasses ecoreClass="widgets.ecore#//GroupBox"/>
+    <genClasses ecoreClass="widgets.ecore#//TabFolder"/>
+    <genClasses ecoreClass="widgets.ecore#//Tab"/>
+    <genClasses ecoreClass="widgets.ecore#//Shell"/>
+    <genClasses ecoreClass="widgets.ecore#//Separator"/>
+    <genClasses ecoreClass="widgets.ecore#//ListViewer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//ListViewer/viewProvider"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//ListViewer/contentProvider"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//SplitPane">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//SplitPane/orientation"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//PasswordField"/>
+    <genClasses ecoreClass="widgets.ecore#//IndexSelection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//IndexSelection/selectionIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//IndexSelection/selectionIndices"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//TreeViewer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//TreeViewer/viewProvider"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//TreeViewer/contentProvider"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//TableViewer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//TableViewer/viewProviders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference widgets.ecore#//TableViewer/contentProvider"/>
+    </genClasses>
+    <genClasses ecoreClass="widgets.ecore#//ObjectSelection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//ObjectSelection/selectedObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//ObjectSelection/selectedObjects"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="widgets.ecore#//AbstractSelection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute widgets.ecore#//AbstractSelection/selectionEvent"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Fp Plug-in
+Bundle-SymbolicName: org.eclipse.e4.core.functionalprog
+Bundle-Version: 4.6.0.qualifier
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.e4.core.functionalprog.optionmonad

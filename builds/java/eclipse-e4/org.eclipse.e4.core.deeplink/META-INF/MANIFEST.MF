@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Client Plug-in
+Bundle-SymbolicName: org.eclipse.e4.core.deeplink
+Bundle-Version: 4.6.0.qualifier
+Bundle-Activator: org.eclipse.e4.core.deeplink.Activator
+Bundle-Vendor: Eclipse
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.e4.core.functionalprog;bundle-version="1.0.0",
+ org.apache.commons.lang;bundle-version="2.3.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: org.eclipse.e4.core.deeplink

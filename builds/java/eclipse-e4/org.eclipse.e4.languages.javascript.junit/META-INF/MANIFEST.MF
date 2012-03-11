@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JUnit JavaScript Support
+Bundle-SymbolicName: org.eclipse.e4.languages.javascript.junit
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Import-Package: junit.framework,
+ org.eclipse.wst.jsdt.debug.rhino.debugger;resolution:=optional,
+ org.mozilla.javascript
+Export-Package: org.eclipse.e4.languages.javascript.junit

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JavaScript Debug Interface (Incubation)
+Bundle-SymbolicName: org.eclipse.e4.languages.javascript.debug.jsdi
+Bundle-Version: 0.9.0.qualifier
+Bundle-RequiredExecutionEnvironment: OSGi/Minimum-1.2
+Export-Package: org.eclipse.e4.languages.javascript.jsdi,
+ org.eclipse.e4.languages.javascript.jsdi.connect,
+ org.eclipse.e4.languages.javascript.jsdi.event,
+ org.eclipse.e4.languages.javascript.jsdi.request

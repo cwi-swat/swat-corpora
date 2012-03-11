@@ -1,0 +1,6 @@
+{
+"BundleSymbolicName":"org.eclipse.e4.javascript.js",
+"BundleVersion":"0.9.0.qualifier",
+"Exports":"Bundle, BundleContext, BundleData, Constants, Framework, JSExport, JSImports, JSRequire, Version, VersionRange",
+"ScriptPath":"Bundle.js, BundleContext.js, BundleData.js, Constants.js, Framework.js, JSExport.js, JSImport.js, JSRequire.js, Version.js, VersionRange.js"
+}

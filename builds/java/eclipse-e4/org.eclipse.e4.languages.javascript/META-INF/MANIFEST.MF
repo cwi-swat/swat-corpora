@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Javascript Core (Incubation)
+Bundle-SymbolicName: org.eclipse.e4.languages.javascript
+Bundle-Version: 0.9.1.qualifier
+Bundle-Activator: org.eclipse.e4.internal.languages.javascript.Activator
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: OSGi/Minimum-1.2
+Import-Package: org.eclipse.osgi.service.resolver;version="1.3.0",
+ org.mozilla.javascript,
+ org.osgi.framework;version="1.3.0",
+ org.osgi.service.packageadmin;version="1.2.0",
+ org.osgi.util.tracker;version="1.4.0"
+Export-Package: org.eclipse.e4.internal.languages.javascript;x-friends:="org.eclipse.e4.languages.javascript.debug.test,org.eclipse.e4.languages.javascript.test",
+ org.eclipse.e4.languages.javascript
+Bundle-Vendor: Eclipse.org
+Require-Bundle: org.eclipse.equinox.common;bundle-version="3.5.0"

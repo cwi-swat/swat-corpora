@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EMF Javascript Plug-in (Incubation)
+Bundle-SymbolicName: org.eclipse.e4.emf.javascript;singleton:=true
+Bundle-Version: 0.9.0.qualifier
+Bundle-Activator: org.eclipse.e4.emf.ecore.javascript.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources;bundle-version="3.5.1",
+ org.mozilla.javascript;bundle-version="1.7.2",
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.emf.ecore.change;bundle-version="2.4.0",
+ org.eclipse.emf.ecore.change.edit;bundle-version="2.4.0",
+ org.eclipse.swt;bundle-version="3.5.0",
+ org.eclipse.core.databinding;bundle-version="1.2.0"
+Eclipse-LazyStart: true
+Export-Package: org.eclipse.e4.emf.command.javascript,
+ org.eclipse.e4.emf.ecore.delegates.javascript,
+ org.eclipse.e4.emf.ecore.javascript,
+ org.eclipse.e4.emf.ecore.javascript.functions
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-Vendor: Eclipse.org
