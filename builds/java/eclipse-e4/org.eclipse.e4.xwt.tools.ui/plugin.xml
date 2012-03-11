@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?><!--
+    Copyright (c) 2010 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        IBM Corporation - initial API and implementation
+ -->
+
+<plugin>
+	<extension id="org.eclipse.e4.xwt.file.popup.open" name="Open"
+		point="org.eclipse.ui.popupMenus">
+		<objectContribution
+			id="org.eclipse.e4.xwt.objectContributionOpen" nameFilter="*.xwt"
+			objectClass="org.eclipse.core.resources.IFile">
+		     <menu
+		           id="org.eclipse.e4.xwt.ui.open"
+		           label="%menu.label.1"
+		           path="group.open">
+		     </menu>
+		     <action
+		           class="org.eclipse.e4.xwt.ui.actions.XWTViewOpenAction"
+		           icon="icons/full/obj16/xaml_wiz.png"
+		           id="org.eclipse.e4.xwt.ui.actions.XWTViewOpenAction"
+		           label="%action.label.2"
+		           menubarPath="org.eclipse.e4.xwt.ui.open/group1">
+		     </action>
+			<action label="%action.label.0"
+				icon="icons/full/obj16/xaml_wiz.png"
+				class="org.eclipse.e4.xwt.ui.actions.XWTOpen"
+				menubarPath="org.eclipse.e4.xwt.ui.open/group1" enablesFor="*"
+				id="org.eclipse.e4.xwt.ui.actions.XWTOpen">
+			</action>
+		</objectContribution> 
+	</extension>
+ <extension
+       point="org.eclipse.ui.newWizards">
+    <category
+          id="org.eclipse.e4.xwt.ui.category.xwt"
+          name="%category.name.0">
+    </category>
+    <wizard
+          category="org.eclipse.e4.xwt.ui.category.xwt"
+          class="org.eclipse.e4.xwt.ui.wizards.NewUIFileWizard"
+          icon="icons/full/etool16/xaml_wiz.png"
+          id="org.eclipse.e4.xwt.ui.wizards.newUIFile"
+          name="%wizard.name.0">
+       <description>
+          %wizard.description.0
+       </description>
+    </wizard>
+    <wizard
+          category="org.eclipse.e4.xwt.ui.category.xwt"
+          class="org.eclipse.e4.xwt.ui.wizards.NewPresentationWizard"
+          hasPages="true"
+          icon="icons/full/etool16/newexprj_wiz.png"
+          id="org.eclipse.e4.xwt.ui.wizards.NewPresentationWizard"
+          name="%wizard.name.1">
+       <description>
+          %wizard.description.1
+       </description>
+    </wizard>
+    <wizard
+          category="org.eclipse.e4.xwt.ui.category.xwt"
+          class="org.eclipse.e4.xwt.ui.wizards.NewUIElementWizard"
+          hasPages="true"
+          icon="icons/full/etool16/newexprj_wiz.png"
+          id="org.eclipse.e4.xwt.ui.wizards.NewUIElementWizard"
+          name="%wizard.name.2">
+       <description>
+          %wizard.description.2
+       </description>
+    </wizard>
+    <wizard
+          category="org.eclipse.e4.xwt.ui.category.xwt"
+          class="org.eclipse.e4.xwt.ui.wizards.NewE4StaticPartWizard"
+          hasPages="true"
+          icon="icons/full/etool16/newexprj_wiz.png"
+          id="org.eclipse.e4.xwt.ui.wizards.NewE4StaticPartWizard"
+          name="%wizard.name.3">
+       <description>
+          %wizard.description.3
+       </description>
+    </wizard>
+    <wizard
+          category="org.eclipse.e4.xwt.ui.category.xwt"
+          class="org.eclipse.e4.xwt.ui.wizards.NewE4DynamicPartWizard"
+          hasPages="true"
+          icon="icons/full/etool16/newexprj_wiz.png"
+          id="org.eclipse.e4.xwt.ui.wizards.NewE4DynamicPartWizard"
+          name="%wizard.name.4">
+       <description>
+          %wizard.description.4
+       </description>
+    </wizard>
+ </extension>
+ <extension
+       id="org.eclipse.e4.xwt.content-types"
+       point="org.eclipse.core.contenttype.contentTypes">
+    <content-type
+          base-type="org.eclipse.core.runtime.xml"
+          file-extensions="xwt"
+          id="org.eclipse.e4.xwt.content-type"
+          name="%content-type.name.0"
+          priority="low">
+    </content-type>
+ </extension>
+ <extension
+       point="org.eclipse.ui.perspectives">
+    <perspective
+          class="org.eclipse.e4.xwt.ui.XWTPerspectiveFactory"
+          fixed="true"
+          icon="icons/full/obj16/xaml_wiz.png"
+          id="org.eclipse.e4.xwt.ui.perspective"
+          name="%perspective.name.0">
+    </perspective>
+ </extension>
+ <extension
+       point="org.eclipse.jdt.core.classpathContainerInitializer">
+    <classpathContainerInitializer
+          class="org.eclipse.e4.xwt.ui.jdt.ClasspathContainerInitializer"
+          id="org.eclipse.e4.xwtl.tools.ui.CONTAINER">
+    </classpathContainerInitializer>
+ </extension>
+ <extension
+       point="org.eclipse.ui.views">
+    <view
+          category="org.eclipse.e4.xwt.ui.category.xwt"
+          class="org.eclipse.e4.xwt.ui.views.XWTView"
+          icon="icons/full/obj16/xaml_wiz.png"
+          id="org.eclipse.e4.xwt.ui.views.XWTView"
+          name="%view.name.0"
+          restorable="true">
+    </view>
+    <category
+          id="org.eclipse.e4.xwt.ui.category.xwt"
+          name="%category.name.1">
+    </category>
+ </extension>
+ <extension
+       point="org.eclipse.e4.xwt.pde.logger">
+    <logger
+          class="org.eclipse.e4.xwt.ui.utils.Log">
+    </logger>
+ </extension>
+</plugin>

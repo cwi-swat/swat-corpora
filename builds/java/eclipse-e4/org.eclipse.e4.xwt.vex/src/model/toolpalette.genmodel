@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.e4.xwt.vex/src"
+    editDirectory="/org.eclipse.e4.xwt.vex.edit/src" editorDirectory="/org.eclipse.e4.xwt.vex.editor/src"
+    modelPluginID="org.eclipse.e4.xwt.vex" modelName="ToolPalette" modelPluginClass=""
+    editPluginClass="org.eclipse.e4.xwt.vex.toolpalette.provider.ToolpaletteEditPlugin"
+    editorPluginClass="org.eclipse.e4.xwt.vex.toolpalette.presentation.ToolpaletteEditorPlugin"
+    testSuiteClass="org.eclipse.e4.xwt.vex.toolpalette.tests.ToolpaletteAllTests" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="6.0" copyrightFields="false">
+  <foreignModel>toolpalette.ecore</foreignModel>
+  <genPackages prefix="ToolPalette" basePackage="org.eclipse.e4.xwt.vex" disposableProviderFactory="true"
+      ecorePackage="toolpalette.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="toolpalette.ecore#//ContextType">
+      <genEnumLiterals ecoreEnumLiteral="toolpalette.ecore#//ContextType/xml_tag"/>
+      <genEnumLiterals ecoreEnumLiteral="toolpalette.ecore#//ContextType/xml_attribute_value"/>
+      <genEnumLiterals ecoreEnumLiteral="toolpalette.ecore#//ContextType/xml_attribute"/>
+      <genEnumLiterals ecoreEnumLiteral="toolpalette.ecore#//ContextType/xml_all"/>
+      <genEnumLiterals ecoreEnumLiteral="toolpalette.ecore#//ContextType/xml_new"/>
+      <genEnumLiterals ecoreEnumLiteral="toolpalette.ecore#//ContextType/none"/>
+    </genEnums>
+    <genClasses ecoreClass="toolpalette.ecore#//ToolPalette">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toolpalette.ecore#//ToolPalette/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference toolpalette.ecore#//ToolPalette/entries"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="toolpalette.ecore#//Entry">
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute toolpalette.ecore#//Entry/toolTip"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toolpalette.ecore#//Entry/largeIcon"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute toolpalette.ecore#//Entry/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toolpalette.ecore#//Entry/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference toolpalette.ecore#//Entry/entries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toolpalette.ecore#//Entry/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toolpalette.ecore#//Entry/icon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toolpalette.ecore#//Entry/context"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute toolpalette.ecore#//Entry/scope"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

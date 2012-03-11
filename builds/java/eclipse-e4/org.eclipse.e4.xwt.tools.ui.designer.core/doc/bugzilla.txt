@@ -1,0 +1,5 @@
+Bug 38436 - Locating Widgets in display coordinates for automated whitebox testing 
+    https://bugs.eclipse.org/bugs/show_bug.cgi?id=38436#c143
+
+Bug 300170 - Shell computeTrim returns a wrong result 
+    https://bugs.eclipse.org/bugs/show_bug.cgi?id=300170

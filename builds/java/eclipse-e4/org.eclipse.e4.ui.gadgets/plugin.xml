@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            class="org.eclipse.e4.ui.internal.gadgets.opensocial.OpenSocialView"
+            id="opensocial-demo.view"
+            name="Gadget"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.eclipse.e4.ui.internal.gadgets.opensocial.OpenGadgetHandler"
+            id="opensocialdemo.opengadget"
+            name="Open Gadget">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.propertyPages">
+      <page
+            class="org.eclipse.e4.ui.internal.gadgets.opensocial.propertyPages.MainPropertyPage"
+            id="org.eclipse.e4.ui.gadgets.Main"
+            name="Gadget">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.e4.ui.internal.gadgets.opensocial.OSGModule">
+            </adapt>
+         </enabledWhen>
+      </page>
+      <page
+            category="org.eclipse.e4.ui.gadgets.Main"
+            class="org.eclipse.e4.ui.internal.gadgets.opensocial.propertyPages.OSGModulePrefsPropertyPage"
+            id="org.eclipse.e4.ui.gadgets.OSGModuleUserPreferences"
+            name="User Preferences">
+         <enabledWhen>
+            <adapt
+                  type="org.eclipse.e4.ui.internal.gadgets.opensocial.OSGModule">
+            </adapt>
+         </enabledWhen>
+      </page>
+   </extension>
+
+</plugin>

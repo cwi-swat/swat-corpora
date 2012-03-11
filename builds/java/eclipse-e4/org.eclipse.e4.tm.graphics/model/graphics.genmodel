@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.e4.tm.graphics/src"
+    modelPluginID="org.eclipse.e4.tm.graphics" modelName="Graphics" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" usedGenPackages="platform:/plugin/org.eclipse.e4.tm/model/tm.genmodel#//tm">
+  <foreignModel>graphics.ecore</foreignModel>
+  <genPackages prefix="Graphics2d" basePackage="org.eclipse.e4.tm" disposableProviderFactory="true"
+      ecorePackage="graphics.ecore#/">
+    <genDataTypes ecoreDataType="graphics.ecore#//Point"/>
+    <genDataTypes ecoreDataType="graphics.ecore#//Dimension"/>
+    <genDataTypes ecoreDataType="graphics.ecore#//Rectangle"/>
+    <genDataTypes ecoreDataType="graphics.ecore#//Transform"/>
+    <genClasses ecoreClass="graphics.ecore#//Graphical2d">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference graphics.ecore#//Graphical2d/children"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference graphics.ecore#//Graphical2d/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graphics.ecore#//Graphical2d/bounds"/>
+    </genClasses>
+    <genClasses ecoreClass="graphics.ecore#//Polyline2d">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graphics.ecore#//Polyline2d/points"/>
+    </genClasses>
+    <genClasses ecoreClass="graphics.ecore#//Rect2d"/>
+    <genClasses ecoreClass="graphics.ecore#//Oval2d"/>
+    <genClasses ecoreClass="graphics.ecore#//RRect2d">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graphics.ecore#//RRect2d/cornerSize"/>
+    </genClasses>
+    <genClasses ecoreClass="graphics.ecore#//Arc2d">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graphics.ecore#//Arc2d/startAngle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graphics.ecore#//Arc2d/angle"/>
+    </genClasses>
+    <genClasses ecoreClass="graphics.ecore#//Text2d">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute graphics.ecore#//Text2d/text"/>
+    </genClasses>
+    <genClasses ecoreClass="graphics.ecore#//Image2d"/>
+  </genPackages>
+</genmodel:GenModel>

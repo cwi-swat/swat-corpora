@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Perspective Plug-in
+Bundle-SymbolicName: org.eclipse.e4.ui.deeplink.typehandler.perspective;singleton:=true
+Bundle-Version: 4.6.0.qualifier
+Bundle-Activator: org.eclipse.e4.ui.deeplink.typehandler.perspective.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.e4.core.deeplink.handler,
+ org.eclipse.ui,
+ org.eclipse.core.resources,
+ org.eclipse.e4.core.functionalprog
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy

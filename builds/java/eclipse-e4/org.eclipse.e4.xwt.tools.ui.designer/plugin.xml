@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?><!--
+    Copyright (c) 2006, 2010 Soyatec (http://www.soyatec.com) and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        Soyatec - initial API and implementation
+ -->
+
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.e4.xwt.tools.ui.designer.editor.XWTDesigner"
+            contributorClass="org.eclipse.e4.xwt.tools.ui.designer.core.editor.DesignerActionBarContributor"
+            default="true"
+            extensions="xwt"
+            icon="icons/full/tools/xaml.png"
+            id="org.eclipse.e4.xwt.tools.ui.designer.XWTDesigner"
+            name="%editor.name">
+         <contentTypeBinding
+            contentTypeId="org.eclipse.e4.xwt.content-type">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.wst.sse.ui.editorConfiguration">
+      <sourceViewerConfiguration
+            class="org.eclipse.e4.xwt.tools.ui.designer.editor.text.XWTStructuredTextViewerConfiguration"
+            target="org.eclipse.e4.xwt.content-type">
+      </sourceViewerConfiguration>
+      <provisionalConfiguration
+            class="org.eclipse.wst.xml.ui.internal.correction.XMLQuickAssistProcessor"
+            target="org.eclipse.e4.xwt.content-type,org.eclipse.wst.xml.XML_DEFAULT"
+            type="org.eclipse.jface.text.quickassist.IQuickAssistProcessor">
+      </provisionalConfiguration>
+   </extension>
+   <extension
+         point="org.eclipse.e4.xwt.tools.ui.designer.core.problemCheckers">
+      <checker
+            class="org.eclipse.e4.xwt.tools.ui.designer.editor.problems.XWTElementChecker">
+      </checker>
+      <checker
+            class="org.eclipse.e4.xwt.tools.ui.designer.editor.problems.XWTAttributeChecker">
+      </checker>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="org.eclipse.e4.xwt.ui.category.xwt"
+            class="org.eclipse.e4.xwt.tools.ui.designer.databinding.ui.DataBindingView"
+            icon="icons/full/tools/binding/binding.png"
+            id="org.eclipse.e4.xwt.tools.ui.designer.DataBindingView"
+            name="Data Binding"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="org.eclipse.e4.xwt.tools.ui.designer.XWTDesigner"
+            labelProvider="org.eclipse.e4.xwt.tools.ui.designer.editor.outline.OutlineLabelProvider">
+         <propertyCategory
+               category="xwt property"></propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="org.eclipse.e4.xwt.tools.ui.designer.XWTDesigner">
+         <propertyTab
+               category="xwt property"
+               id="AppearanceTab"
+               label="Appearance">
+         </propertyTab>
+         <propertyTab
+               afterTab="AppearanceTab"
+               category="xwt property"
+               id="SizeLocationTab"
+               label="Size &amp; Location">
+         </propertyTab>
+         <propertyTab
+               afterTab="SizeAndLocationTab"
+               category="xwt property"
+               id="LayoutTab"
+               label="Layout">
+         </propertyTab>
+         <propertyTab
+               afterTab="LayoutTab"
+               category="xwt property"
+               id="LayoutDataTab"
+               label="Layout Data">
+         </propertyTab>
+         <propertyTab
+               afterTab="Layout Data"
+               category="xwt property"
+               id="DataBindingTab"
+               label="Data Binding">
+         </propertyTab>
+         <propertyTab
+               afterTab="Data Binding"
+               category="xwt property"
+               id="AdvancedTab"
+               label="Advanced">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="org.eclipse.e4.xwt.tools.ui.designer.XWTDesigner">
+         <propertySection
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.TextSection"
+               filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.TextSectionFilter"
+               id="TextSection"
+               tab="AppearanceTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               afterSection="TextSection"
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.FontSection"
+               filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.BasicFilter"
+               id="FontSection"
+               tab="AppearanceTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               afterSection="FontSection"
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.ForegroundSection"
+               filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.BasicFilter"
+               id="ForegroundSection"
+               tab="AppearanceTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               afterSection="ForegroundSection"
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.BackgroundSection"
+			   filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.BasicFilter"
+               id="BackgroundSection"
+               tab="AppearanceTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               afterSection="BackgroundSection"
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.ImageSection"
+			   filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.BasicFilter"               
+               id="ImageSection"
+               tab="AppearanceTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               afterSection="ImageSection"
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.BackgroundImageSection"
+               filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.BasicFilter"               
+               id="BackgroundImageSection"
+               tab="AppearanceTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.ConstraintSection"
+               filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.ConstraintSectionFilter"
+               id="ConstraintSection"
+               tab="SizeLocationTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.LayoutSection"
+               filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.LayoutSectionFilter"
+               id="LayoutSection"
+               tab="LayoutTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.LayoutDataSection"
+               filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.LayoutDataSectionFilter"
+               id="LayoutDataSection"
+               tab="LayoutDataTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.DataBindingSection"
+               id="DataBindingSection"
+               tab="DataBindingTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+         <propertySection
+               class="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.AdvancedSection"
+			   filter="org.eclipse.e4.xwt.tools.ui.designer.properties.tabbed.sections.filters.BasicFilter"                              
+               id="AdvancedSection"
+               tab="AdvancedTab">
+            <input
+                  type="org.eclipse.gef.EditPart">
+            </input>
+         </propertySection>
+      </propertySections>
+   </extension>
+ <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.eclipse.e4.xwt.tools.ui.designer.preference.PreferenceInitializer">
+      </initializer>
+  </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.eclipse.e4.xwt.tools.ui.designer.preference.XWTPreferencePage"
+            id="org.eclipse.e4.xwt.tools.ui.designer.preference.XWTPreferencePage"
+            name="XWT Designer">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.e4.xwt.tools.ui.palette.paletteContribution">
+      <Contribution
+            targetId="org.eclipse.e4.xwt.tools.ui.designer.XWTDesigner">
+         <Resource
+               provider="org.eclipse.e4.xwt.tools.ui.designer.editor.palette.XWTPaletteProvider"
+               uri="palette/xwt.palette">
+         </Resource>
+         <Tool
+               class="org.eclipse.e4.xwt.tools.ui.designer.editor.XWTSelectionTool"
+               type="selection">
+         </Tool>
+         <Tool
+               class="org.eclipse.e4.xwt.tools.ui.designer.editor.dnd.EntryCreationTool"
+               type="creation">
+         </Tool>
+      </Contribution>
+   </extension>
+</plugin>

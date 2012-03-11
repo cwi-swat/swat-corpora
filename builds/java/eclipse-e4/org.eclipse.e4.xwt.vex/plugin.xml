@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.2 2009/07/01 19:48:11 yvyang Exp $
+-->
+
+<plugin>
+   <extension-point id="problemChecker" name="ProblemChecker" schema="schema/problemChecker.exsd"/>
+   <extension-point id="render" name="VEXRender" schema="schema/render.exsd"/>
+   <extension-point id="palettePath" name="org.eclipse.e4.xwt.vex" schema="schema/palettePath.exsd"/>
+   <extension-point id="customPalette" name="customPalette" schema="schema/customPalette.exsd"/>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.eclipse.org/ve/xml/toolpalette" 
+       class = "org.eclipse.e4.xwt.vex.toolpalette.ToolPalettePackage"
+       genModel = "model/toolpalette.genmodel" /> 
+  </extension>
+
+	<extension point="org.eclipse.wst.sse.ui.dropTargetTransfers">
+		<dropTargetContribution
+			targetID="org.eclipse.wst.sse.ui.StructuredTextEditor"
+			id="org.eclipse.e4.xwt.vex.extension.LocalSelectionTransfers">
+			<transfer
+				priority="mid"
+				singleton="true"
+				class="org.eclipse.jface.util.LocalSelectionTransfer"
+				method="getTransfer"
+				id="org.eclipse.e4.xwt.vex.dnd.LocalSelectionTransfer">
+			</transfer>
+		</dropTargetContribution>
+	</extension>
+</plugin>

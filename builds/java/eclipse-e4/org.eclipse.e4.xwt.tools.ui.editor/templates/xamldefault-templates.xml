@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	/*******************************************************************************
+	* Copyright (c) 2004, 2009 IBM Corporation and others.
+	* All rights reserved. This program and the accompanying materials
+	* are made available under the terms of the Eclipse Public License v1.0
+	* which accompanies this distribution, and is available at
+	* http://www.eclipse.org/legal/epl-v10.html
+	* 
+	* Contributors:
+	*     IBM Corporation - initial API and implementation
+	*******************************************************************************/
+-->
+<templates>
+
+	<template name="%Templates.static.resource.expression.name"
+		description="%Templates.static.resource.expression.desc"
+		id="org.eclipse.e4.xwt.tools.ui.editors.templates.StaticResourceExpression" context="xml_attribute_value"
+		enabled="true">
+{StaticResource ${cursor}}
+	</template>
+
+	<template name="%Templates.dynamic.resource.expression.name"
+		description="%Templates.dynamic.resource.expression.desc"
+		id="org.eclipse.e4.xwt.tools.ui.editors.templates.DynamicResourceExpression" context="xml_attribute_value"
+		enabled="true">
+{DynamicResource ${cursor}}
+	</template>
+
+	<template name="%Templates.static.resource.name"
+		description="%Templates.static.resource.desc"
+		id="org.eclipse.e4.xwt.ui.editors.templates.StaticResource" context="xml_tag"
+		enabled="true">
+&lt;StaticResource ResourceKey="${cursor}"/&gt;
+	</template>
+
+	<template name="%Templates.dynamic.resource.name"
+		description="%Templates.dynamic.resource.desc"
+		id="org.eclipse.e4.xwt.tools.ui.editors.templates.DynamicResource" context="xml_tag"
+		enabled="true">
+&lt;DynamicResource ResourceKey="${cursor}"/&gt;
+	</template>
+
+	<template name="%Templates.static.binding.expression.name"
+		description="%Templates.static.binding.expression.desc"
+		id="org.eclipse.e4.xwt.tools.ui.editors.templates.static.BindingExpression" context="xml_attribute_value"
+		enabled="true">
+{Binding Source={StaticResource ${cursor}}, Path=Name}
+	</template>
+	
+	<template name="%Templates.dynamic.binding.expression.name"
+		description="%Templates.dynamic.binding.expression.desc"
+		id="org.eclipse.e4.xwt.tools.ui.editors.templates.dynamic.BindingExpression" context="xml_attribute_value"
+		enabled="true">
+{Binding Source={DynamicResource ${cursor}}, Path=Name}
+	</template>
+
+	<template name="%Templates.static.binding.name"
+		description="%Templates.static.binding.desc"
+		id="org.eclipse.e4.xwt.tools.ui.editors.templates.static.Binding" context="xml_tag"
+		enabled="true">
+&lt;Binding Source="{StaticResource ${cursor}}"
+				Path="Name"/&gt;
+  	</template>
+	
+	<template name="%Templates.dynamic.binding.name"
+		description="%Templates.dynamic.binding.desc"
+		id="org.eclipse.e4.xwt.tools.ui.editors.templates.dynamic.Binding" context="xml_attribute_value"
+		enabled="true">
+&lt;Binding Source="{DynamicResource ${cursor}}"
+				Path="Name"/&gt;
+	</template>
+
+	<template name="%Templates.style.name"
+		description="%Templates.style.desc"
+		id="org.eclipse.e4.xwt.tools.ui.style.Binding" context="xml_tag"
+		enabled="true">
+&lt;Style x:Key="key" TargetType="${cursor}"&gt;
+	&lt;Setter Property="propertyName" Value="16" /&gt;
+	&lt;Style.Triggers&gt;
+		&lt;Trigger Property="propertyName" Value="True"&gt;
+			&lt;Setter Property="propertyName" Value="Red" /&gt;
+		&lt;/Trigger&gt;
+	&lt;/Style.Triggers&gt;	
+&lt;/Style&gt;
+	</template>
+
+	<template name="%Templates.xmlns.name"
+		description="%Templates.xmlns.desc"
+		id="org.eclipse.e4.xwt.tools.ui.style.Binding" context="xml_attribute"
+		enabled="true">xmlns="http://www.eclipse.org/swt/presentation"</template>
+
+	<template name="%Templates.xmlns.x.name"
+		description="%Templates.xmlns.x.desc"
+		id="org.eclipse.e4.xwt.tools.ui.style.Binding" context="xml_attribute"
+		enabled="true">xmlns:x="http://www.eclipse.org/swt"</template>
+
+	<template name="%Templates.xkey.name"
+		description="%Templates.xkey.desc"
+		id="org.eclipse.e4.xwt.tools.ui.style.Binding" context="xml_attribute"
+		enabled="true">
+		x:Key="${cursor}"
+	</template>
+
+</templates>

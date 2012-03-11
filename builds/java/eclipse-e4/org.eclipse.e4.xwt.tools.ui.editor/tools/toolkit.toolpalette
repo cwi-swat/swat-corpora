@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolpalette:ToolPalette xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:toolpalette="http://www.eclipse.org/ve/xml/toolpalette">
+  <entries name="SWT Containers" icon="swt_containers.gif">
+    <entries toolTip="Create a Composite." content="&lt;Composite x:style=&quot;SWT.NONE&quot;>${cursor}&lt;/Composite>" name="Composite" icon="composite_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Shell" content="&lt;Shell x:style=&quot;SWT.NONE&quot;>${cursor}&lt;/Shell>" name="Shell" icon="shell_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a ScrolledComposite." content="&lt;ScrolledComposite x:style=&quot;SWT.V_SCROLL | SWT.H_SCROLL&quot;>${cursor}&lt;/Composite>" name="ScrolledComposite" icon="scrolledcomposite_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Canvas." largeIcon="canvas_obj.gif" content="&lt;Canvas x:style=&quot;SWT.NONE&quot;>${cursor}&lt;/Canvas>" name="Canvas" icon="canvas_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Group." content="&lt;Group x:style=&quot;SWT.NONE&quot; text=&quot;group&quot;>${cursor}&lt;/Group>" name="Group" icon="group_obj.gif" scope="Composite"/>
+    <entries toolTip="Create SashFrom." content="&lt;SashFrom x:style=&quot;SWT.NONE&quot; weight=&quot;30, 70&quot;>${cursor}&lt;/SashFrom>" name="SashFrom" icon="sashform_obj.gif" scope="Composite"/>
+    <entries toolTip="Create TabFolder." content="&lt;TabFolder x:style=&quot;SWT.NONE&quot;>&#xD;&#xA;&#x9;&lt;TabItem text=&quot;${cursor}&quot;>&#xD;&#xA;&#x9;&#x9;&lt;TabItem.control>&#xD;&#xA;&#x9;&#x9;&lt;/TabItem.control>&#xD;&#xA;&#x9;&lt;/TabItem>&#xD;&#xA;&lt;/TabFolder>" name="TabFolder" icon="tabfolder_obj.gif" scope="Composite"/>
+    <entries toolTip="Create TabItem." content="&lt;TabItem x:style=&quot;SWT.NONE&quot;>${cursor}&lt;/TabItem>" name="TabItem" icon="tabitem_obj.gif" scope="TabFolder"/>
+    <entries toolTip="Create CTabFolder." content="&lt;CTabFolder x:style=&quot;SWT.NONE&quot;>&#xD;&#xA;&#x9;&lt;CTabItem text=&quot;${cursor}&quot;>&#xD;&#xA;&#x9;&#x9;&lt;CTabItem.control>&#xD;&#xA;&#x9;&#x9;&lt;/CTabItem.control>&#xD;&#xA;&#x9;&lt;/CTabItem>&#xD;&#xA;&lt;/CTabFolder>" name="CTabFolder" icon="ctabfolder_obj.gif" scope="Composite"/>
+    <entries toolTip="Create CTabItem.&#xD;&#xA;" content="&lt;CTabItem x:style=&quot;SWT.NONE&quot;>${cursor}&lt;/CTabItem>" name="CTabItem" icon="ctabitem_obj.gif" scope="CTabFolder"/>
+  </entries>
+  <entries name="SWT Controls" icon="swt_controls.gif">
+    <entries toolTip="Create a Button." largeIcon="button_obj.gif" content="&lt;Button x:style=&quot;SWT.PUSH&quot; text=&quot;${cursor}&quot;>&lt;/Button>" name="Button" icon="button_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Browser." largeIcon="browser_obj.gif" content="&lt;Browser x:style=&quot;SWT.NONE&quot; url=&quot;${cursor}&quot;>&lt;/Browser>" name="Browser" icon="browser_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a CCombo." largeIcon="ccombo_obj.gif" content="&lt;CCombo x:style=&quot;SWT.NONE&quot;>&lt;/CCombo>" name="CCombo" icon="ccombo_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a CLabel." content="&lt;CLabel x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/CLabel>" name="CLabel" icon="clabel_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Combo." largeIcon="comboviewer_obj.gif" content="&lt;Combo x:style=&quot;SWT.NONE&quot;>&lt;/Combo>" name="Combo" icon="comboviewer_obj.gif" scope="Composite"/>
+    <entries toolTip="CoolBar Category" name="CoolBar">
+    <entries toolTip="Create a CoolBar." largeIcon="coolbar_obj.gif" content="&lt;CoolBar x:style=&quot;SWT.NONE&quot; >&lt;/CoolBar>" name="CoolBar" icon="coolbar_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a CoolItem." largeIcon="coolbar_obj.gif" content="&lt;CoolItem x:style=&quot;SWT.NONE&quot; >&lt;/CoolItem>" name="CoolItem" icon="coolbar_obj.gif" scope="CoolBar"/>
+    </entries>
+    <entries toolTip="Create a DateTime." content="&lt;DateTime x:style=&quot;SWT.NONE&quot;>${cursor}&lt;/DateTime>" name="DateTime" icon="form_obj.gif" scope="Composite"/>
+    <entries toolTip="ExpandBar Category" name="ExpandBar">
+    <entries toolTip="Create a ExpandBar." content="&lt;ExpandBar x:style=&quot;SWT.NONE&quot; height=&quot;20&quot;>${cursor}&lt;/ExpandBar>" name="ExpandBar" icon="expandable_composite_obj.gif" scope="Composite"/>
+    <entries toolTip="Create an ExpandItem." largeIcon="expandable_composite_obj.gif" content="&lt;ExpandItem x:style=&quot;SWT.NONE&quot; >&lt;ExpandItem.control>${cursor}&lt;/ExpandItem.control>&lt;/ExpandItem>" name="ExpandItem" icon="expandable_composite_obj.gif" scope="ExpandBar"/>
+    </entries>
+    <entries toolTip="Create a Label." content="&lt;Label x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/Label>" name="Label" icon="label_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Link." content="&lt;Link x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/Link>" name="Link" icon="link_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a List." largeIcon="listbox_obj.gif" content="&lt;List x:style=&quot;SWT.NONE&quot;>&lt;List.text>${cursor}&lt;/List.text>&lt;/List>" name="List" icon="listbox_obj.gif" scope="Composite"/>
+    <entries toolTip="Menu Category" name="Menu">
+    <entries toolTip="Create a Menu." content="&lt;Menu x:style=&quot;SWT.NONE&quot;>${cursor}&lt;/Menu>" name="Menu" icon="menu_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a MenuItem." content="&lt;MenuItem x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/MenuItem>" name="MenuItem" icon="menuitem_obj.gif" scope="Menu"/>
+    </entries>
+    <entries toolTip="Create a ProgressBar." content="&lt;ProgressBar x:style=&quot;SWT.NONE&quot;>&lt;/ProgressBar>" name="ProgressBar" icon="progressbar_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Sash." content="&lt;Sash x:style=&quot;SWT.NONE&quot;>&lt;/Sash>" name="Sash" icon="sashform_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Scale" content="&lt;Scale x:style=&quot;SWT.NONE&quot;>&lt;/Scale>" name="Scale" icon="scale_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Slider" content="&lt;Slider x:style=&quot;SWT.NONE&quot;>&lt;/Slider>" name="Slider" icon="slider_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Spinner" content="&lt;Spinner x:style=&quot;SWT.NONE&quot;>&lt;/Spinner>" name="Spinner" icon="spinner_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Separator." content="&lt;Label x:style=&quot;SWT.SEPARATOR&quot; />" name="Separator" icon="separator_obj.gif" scope="ToolBar"/>
+    <entries toolTip="Create a StyledText." content="&lt;StyledText x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/StyledText>" name="StyledText" icon="styledtext_obj.gif" scope="Composite"/>
+    <entries toolTip="Table Category" name="Table">
+    <entries toolTip="Create a Table." content="&lt;Table x:style=&quot;SWT.NONE&quot; >&lt;/Table>" name="Table" icon="table_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a TableColumn." content="&lt;TableColumn x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/TableColumn>" name="TableColumn" icon="column_obj.gif" scope="Table"/>
+    <entries toolTip="Create a TableItem." largeIcon="table_obj.gif" content="&lt;TableItem x:style=&quot;SWT.NONE&quot; >&lt;/TableItem>" name="TableItem" icon="table_obj.gif" scope="Table"/>
+    </entries>
+    <entries toolTip="Create a Text." content="&lt;Text x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/Text>" name="Text" icon="text_obj.gif" scope="Composite"/>
+    <entries toolTip="Tool Category" name="Tool">
+    <entries toolTip="Create a ToolBar." content="&lt;ToolBar x:style=&quot;SWT.NONE&quot; >${cursor}&lt;/ToolBar>" name="ToolBar" icon="toolbar_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a ToolItem." content="&lt;ToolItem x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/ToolItem>" name="ToolItem" icon="toolitempush_obj.gif" scope="ToolBar"/>
+    <entries toolTip="Create a ToolTip." content="&lt;ToolTip x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/ToolTip>" name="ToolTip" icon="tooltip_obj.gif" scope="Control"/>
+    </entries>
+    <entries toolTip="Tree Category" name="Tree">
+    <entries toolTip="Create a Tree." content="&lt;Tree x:style=&quot;SWT.NONE&quot;>&quot;${cursor}&quot;&lt;/Tree>" name="Tree" icon="tree_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a TreeColumn." content="&lt;TreeColumn x:style=&quot;SWT.NONE&quot; text=&quot;${cursor}&quot;>&lt;/TreeColumn>" name="TreeColumn" icon="column_obj.gif" scope="Tree"/>
+    <entries toolTip="Create a TreeItem." largeIcon="tree_obj.gif" content="&lt;TreeItem x:style=&quot;SWT.NONE&quot; >&lt;/TreeItem>" name="TreeItem" icon="tree_obj.gif" scope="Tree"/>
+    </entries>
+  </entries>
+  <entries name="SWT Buttons" icon="button_obj.gif">
+    <entries toolTip="Create a CheckButton." content="&lt;Button x:style=&quot;SWT.CHECK&quot; text=&quot;${cursor}&quot;>&lt;/Button>" name="CheckButton" icon="checkbox_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a RadioButton." content="&lt;Button x:style=&quot;SWT.RADIO&quot; text=&quot;${cursor}&quot;>&lt;/Button>" name="RadioButton" icon="radiobutton_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a ToggleButton." content="&lt;Button x:style=&quot;SWT.TOGGLE&quot; text=&quot;${cursor}&quot;>&lt;/Button>" name="ToggleButton" icon="toggledbutton_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a Button." largeIcon="button_obj.gif" content="&lt;Button x:style=&quot;SWT.PUSH&quot; text=&quot;${cursor}&quot;>&lt;/Button>" name="PushButton" icon="button_obj.gif" scope="Composite"/>
+  </entries>
+  <entries name="SWT Menu" icon="menu_obj.gif">
+    <entries toolTip="Create a Menu." content="&lt;Menu x:style=&quot;SWT.NONE&quot;>${cursor}&lt;/Menu>" name="Menu" icon="menu_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a CheckMenuItem." content="&lt;MenuItem x:style=&quot;SWT.CHECK&quot; text=&quot;${cursor}&quot;>&lt;/MenuItem>" name="CheckMenuItem" icon="checkbox_obj.gif" scope="Menu"/>
+    <entries toolTip="Create a RadioMenuItem." content="&lt;MenuItem x:style=&quot;SWT.RADIO&quot; text=&quot;${cursor}&quot;>&lt;/MenuItem>" name="RadioMenuItem" icon="radiobutton_obj.gif" scope="Menu"/>
+    <entries toolTip="Create a PushMenuItem." largeIcon="button_obj.gif" content="&lt;MenuItem x:style=&quot;SWT.PUSH&quot; text=&quot;${cursor}&quot;>&lt;/MenuItem>" name="PushMenuItem" icon="button_obj.gif" scope="Menu"/>
+  </entries>
+  <entries name="SWT ToolIBar" icon="toolbar_obj.gif">
+    <entries toolTip="Create a ToolBar." content="&lt;ToolBar x:style=&quot;SWT.NONE&quot; >${cursor}&lt;/ToolBar>" name="ToolBar" icon="toolbar_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a CheckToolItem." content="&lt;ToolItem x:style=&quot;SWT.CHECK&quot; text=&quot;${cursor}&quot;>&lt;/ToolItem>" name="CheckToolItem" icon="toolitemcheck_obj.gif" scope="ToolBar"/>
+    <entries toolTip="Create a RadioToolItem." content="&lt;ToolItemx:style=&quot;SWT.RADIO&quot; text=&quot;${cursor}&quot;>&lt;/ToolItem>" name="RadioToolItem" icon="toolitemradio_obj.gif" scope="ToolBar"/>
+    <entries toolTip="Create a ToggleToolItem." content="&lt;ToolItem x:style=&quot;SWT.TOGGLE&quot; text=&quot;${cursor}&quot;>&lt;/ToolItem>" name="ToggleToolItem" icon="toggledbutton_obj.gif" scope="ToolBar"/>
+    <entries toolTip="Create a PushToolItem." content="&lt;ToolItem x:style=&quot;SWT.PUSH&quot; text=&quot;${cursor}&quot;>&lt;/ToolItem>" name="PushToolItem" icon="toolitempush_obj.gif" scope="ToolBar"/>
+    <entries toolTip="Create a DropDownToolItem." content="&lt;ToolItem x:style=&quot;SWT.DROPDOWN&quot; text=&quot;${cursor}&quot;>&lt;/ToolItem>" name="DropDownToolItem" icon="toolitemdrop_obj.gif" scope="ToolBar"/>
+    <entries toolTip="Create a Separator." content="&lt;ToolItem x:style=&quot;SWT.SEPARATOR&quot; />" name="Separator" icon="toolitemseparator_obj.gif" scope="ToolBar"/>
+  </entries>
+  <entries name="SWT Layouts" icon="layouts.gif">
+    <entries toolTip="New FillLayout." content="&lt;Composite.layout>&lt;FillLayout/>&lt;/Composite.layout>" name="FillLayout" icon="layout_obj.gif" scope="Composite"/>
+    <entries toolTip="New FormLayout." content="&lt;Composite.layout>&lt;FormLayout/>&lt;/Composite.layout>" name="FormLayout" icon="layout_obj.gif" scope="Composite"/>
+    <entries toolTip="New FormData." content="&lt;Control.layoutData>&lt;FormData top=&quot;0, 0&quot; left=&quot;0, 0&quot; bottom=&quot;30, 0&quot; right=&quot;40, 0&quot;/>&lt;/Control.layoutData>" name="FormData" icon="layoutdata_obj.gif" scope="Control"/>
+    <entries toolTip="New GridLayout." content="&lt;Composite.layout>&lt;GridLayout numColumns=&quot;${cursor}&quot;/>&lt;/Composite.layout>" name="GridLayout" icon="layout_obj.gif" scope="Composite"/>
+    <entries toolTip="New GridData." content="&lt;Control.layoutData>&lt;GridData grabExcessVerticalSpace=&quot;true&quot; grabExcessHorizontalSpace=&quot;true&quot; horizontalAlignment=&quot;GridData.FILL&quot; verticalAlignment=&quot;GridData.FILL&quot;/>&lt;/Control.layoutData>" name="GridData" icon="layoutdata_obj.gif" scope="Control"/>
+    <entries toolTip="New RowLayout." content="&lt;Composite.layout>&lt;RowLayout type=&quot;SWT.HORIZONTAL&quot;/>&lt;/Composite.layout>" name="RowLayout" icon="layout_obj.gif" scope="Composite"/>
+    <entries toolTip="New RowData." content="&lt;Control.layoutData>&lt;RowData width=&quot;&quot; height=&quot;&quot;/>&lt;/Control.layoutData>" name="RowData" icon="layoutdata_obj.gif" scope="Control"/>
+    <entries toolTip="New StackLayout." content="&lt;Composite.layout>&lt;StackLayout/>&lt;/Composite.layout>" name="StackLayout" icon="layout_obj.gif" scope="Composite"/>
+    <entries toolTip="New StackData." content="&lt;Control.layoutData>&lt;StackData/>&lt;/Control.layoutData>" name="StackData" icon="layoutdata_obj.gif" scope="Control"/>
+  </entries>
+  <entries name="JFace Viewers">
+    <entries toolTip="Create a TreeViewer." content="&lt;TreeViewer>${cursor}&lt;/TreeViewer>" name="TreeViewer" icon="treeviewer_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a TableViewer." content="&lt;TableViewer> ${cursor}&lt;/TableViewer>" name="TableViewer" icon="tableviewer_obj.gif" scope="Composite"/>
+    <entries toolTip="Create a ListViewer." content="&lt;ListViewer>${cursor}&lt;/ListViewer>" name="ListViewer" icon="listviewer_obj.gif" scope="Composite"/>
+  </entries>
+  <entries name="Data Binding">
+    <entries content="{Binding Path=$(cursor)}" name="Binding" context="xml_attribute_value" scope=""/>
+    <entries content="{Binding Source={StaticResource $(cursor)}, Path=Property}" name="Static Resource" context="xml_attribute_value" scope=""/>
+    <entries content="{Binding Source={DynamicResource $(cursor)}, Path=Property}" name="Dynamic Resource" context="xml_attribute_value" scope=""/>
+  </entries>
+</toolpalette:ToolPalette>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?><!--
+    Copyright (c) 2006, 2010 Soyatec (http://www.soyatec.com) and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        Soyatec - initial API and implementation
+ -->
+
+<plugin>
+   <extension-point id="problemCheckers" name="%extension-point.name" schema="schema/problemCheckers.exsd"/>
+   <extension-point id="sourcePages" name="Source Pages" schema="schema/sourcePages.exsd"/>
+   <extension
+         point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.xml"
+            file-extensions="xaml"
+            id="content-type.xaml"
+            name="%content-type.name"
+            priority="normal">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.wst.sse.ui.editorConfiguration">
+      <documentationTextHover
+            class="org.eclipse.wst.xml.ui.internal.taginfo.XMLTagInfoHoverProcessor"
+            target="org.eclipse.wst.xml.XML_DEFAULT">
+      </documentationTextHover>
+      <provisionalConfiguration
+            class="org.eclipse.wst.xml.ui.internal.provisional.XMLSourceEditingTextTools"
+            target="content-type.xaml"
+            type="sourceeditingtexttools">
+      </provisionalConfiguration>
+      <provisionalConfiguration
+            class="org.eclipse.wst.xml.ui.internal.text.XMLDocumentRegionEdgeMatcher"
+            target="content-type.xaml"
+            type="characterpairmatcher">
+      </provisionalConfiguration>
+      <provisionalConfiguration
+            class="org.eclipse.wst.xml.ui.internal.projection.StructuredTextFoldingProviderXML"
+            target="content-type.xaml"
+            type="structuredtextfoldingprovider">
+      </provisionalConfiguration>
+      <provisionalConfiguration
+            class="org.eclipse.wst.xml.ui.internal.correction.XMLQuickAssistProcessor"
+            target="org.eclipse.wst.xml.XML_DEFAULT"
+            type="org.eclipse.jface.text.quickassist.IQuickAssistProcessor">
+      </provisionalConfiguration>
+      <provisionalDefinition
+            target="content-type.xaml"
+            type="preferencepages"
+            value="org.eclipse.wst.sse.ui.preferences.xml, org.eclipse.wst.sse.ui.preferences.xml.source, org.eclipse.wst.sse.ui.preferences.xml.templates, org.eclipse.wst.sse.ui.preferences.xml.colors">
+      </provisionalDefinition>
+      <provisionalDefinition
+            target="content-type.xaml"
+            type="spellingregions"
+            value="XML_COMMENT_TEXT, XML_CONTENT, XML_DEFAULT">
+      </provisionalDefinition>
+   </extension>
+   <extension
+         id="org.eclipse.e4.xwt.tools.ui.designer.markers"
+         point="org.eclipse.core.resources.markers">
+               <persistent value="true"/> 
+      <super type="org.eclipse.core.resources.problemmarker"/> 
+      <super type="org.eclipse.wst.xml.core.validationMarker"/> 
+   </extension>
+</plugin>

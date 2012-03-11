@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- build script to create a batch ActionScript compiler from 
+     org.eclipse.jdt.core and org.eclipse.jdt.core.as -->
+<project name="Eclipse Batch Action Script Compiler" default="extract_export" basedir="../..">
+	<target name="init">
+		<tstamp/>
+		<property name="eca-tmp-folder" value="${basedir}/tmp/eca-tmp-folder" />
+		<property name="eca-tmp-src-folder" value="${basedir}/tmp/eca-tmp-src-folder" />
+		<mkdir dir="${eca-tmp-src-folder}" />
+		<mkdir dir="${eca-tmp-folder}"/>
+	</target>
+	
+	<target name="extract-compiler" depends="init">
+		<property name="target.folder" value="${basedir}/org.eclipse.jdt.core/bin"/>
+		<echo message="Extract .class file and properties for the batch ActionScript compiler" />
+		<copy todir="${eca-tmp-folder}">
+			<fileset dir="${target.folder}">
+				<include name="org/eclipse/jdt/internal/compiler/**"/>
+				<include name="org/eclipse/jdt/core/compiler/**"/>
+				<!-- breaking the independence of the compiler from other sources { -->
+				<include name="org/eclipse/jdt/internal/core/util/CommentRecorder*.class"/>
+				<!-- } -->
+				<exclude name="**/package.htm*"/>
+				<exclude name="org/eclipse/jdt/core/compiler/CompilationParticipant*.class"/>
+				<exclude name="org/eclipse/jdt/core/compiler/BuildContext.class"/>
+				<exclude name="org/eclipse/jdt/core/compiler/IScanner.class"/>
+				<exclude name="org/eclipse/jdt/core/compiler/ITerminalSymbols*.class"/>
+				<exclude name="org/eclipse/jdt/core/compiler/ReconcileContext*.class"/>
+				<exclude name="org/eclipse/jdt/internal/compiler/DocumentElementParser*.class"/>
+				<exclude name="org/eclipse/jdt/internal/compiler/IDocumentElementRequestor.class"/>
+				<exclude name="org/eclipse/jdt/internal/compiler/ISourceElementRequestor*.class"/>
+				<exclude name="org/eclipse/jdt/internal/compiler/SourceElementParser*.class"/>
+				<exclude name="org/eclipse/jdt/internal/compiler/SourceElementRequestorAdapter*.class"/>
+				<exclude name="org/eclipse/jdt/internal/compiler/SourceJavadocParser*.class"/>
+				<exclude name="org/eclipse/jdt/internal/compiler/parser/SourceTypeConverter*.class"/>
+			</fileset>
+		</copy>
+		<copy todir="${eca-tmp-folder}">
+			<fileset dir="${basedir}/org.eclipse.jdt.compiler.as/bin">
+				<include name="org/eclipse/jdt/internal/compiler/as/*"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="export" depends="init">
+		<property name="dest" value="${basedir}/../eca-export" />
+		<mkdir dir="${dest}" />
+		<echo message="UPDATE eca.jar" />
+		<delete file="${dest}/eca.jar" failonerror="false"/>
+		<zip zipfile="${dest}/eca.jar">
+			<fileset dir="${eca-tmp-folder}">
+				<include name="**/*"/>
+			</fileset>
+			<fileset dir="${basedir}/org.eclipse.jdt.compiler.as/eca">
+				<include name="**/*"/>
+			</fileset>
+		</zip>
+	</target>
+
+	<target name="cleanup">
+		<delete dir="${eca-tmp-folder}" failonerror="false"/>
+		<delete dir="${eca-tmp-src-folder}" failonerror="false"/>
+	</target>
+	
+	<target name="extract_export" depends="init">
+		<antcall target="extract-compiler"/>
+		<antcall target="export"/>
+		<antcall target="cleanup"/>
+	</target>
+</project>

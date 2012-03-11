@@ -1,0 +1,46 @@
+/*******************************************************************************
+ * Copyright (c) 2006, 2010 Soyatec (http://www.soyatec.com) and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Soyatec - initial API and implementation
+ *******************************************************************************/
+package org.eclipse.e4.xwt.tools.ui.designer.databinding;
+
+/**
+ * @author jliu (jin.liu@soyatec.com)
+ */
+public interface IObservable {
+
+	int OBSERVE_SWT_JFACE = 1;
+	int OBSERVE_JAVA_BAEN = 3;
+	int OBSERVE_UNKNOWN = 0;
+
+	Object getSource();
+
+	String getDisplayName();
+
+	IObservable getParent();
+
+	IObservable[] getChildren();
+
+	Property[] getProperties();
+
+	Property getProperty(String propertyName);
+
+	/**
+	 * One type of OBSERVE_WIDGET, OBSERVE_VIEWER, OBSERVE_BAEN and OBSERVE_UNKNOWN
+	 * 
+	 * @return
+	 */
+	int getType();
+
+	/**
+	 * @return
+	 */
+	boolean hasChildren();
+
+}

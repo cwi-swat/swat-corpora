@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ASCII"?>
+<tm.widgets:Composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:swt.layouts="http://www.eclipse.org/swt/layouts.ecore" xmlns:swt.widgets="http://www.eclipse.org/swt/widgets.ecore" xmlns:tm.widgets="http://no.hal/tm/widgets.ecore">
+  <controls xsi:type="tm.widgets:TabFolder" name="aTabFolder">
+    <controls xsi:type="tm.widgets:Tab" name="rowLayout" text="RowLayout">
+      <controls xsi:type="tm.widgets:Label" name="aLabel" text="A label">
+        <layoutData xsi:type="swt.layouts:RowLayoutData" width="50"/>
+      </controls>
+      <controls xsi:type="tm.widgets:Text" name="aText" text="A text">
+        <layoutData xsi:type="swt.layouts:RowLayoutData" width="50"/>
+      </controls>
+      <controls xsi:type="tm.widgets:PushButton" name="aPushButton" text="A push button">
+        <layoutData xsi:type="swt.layouts:RowLayoutData"/>
+      </controls>
+      <layout xsi:type="swt.layouts:RowLayout"/>
+    </controls>
+    <controls xsi:type="tm.widgets:Tab" name="gridLayout" text="GridLayout">
+      <controls xsi:type="tm.widgets:Label" name="aLabel" text="A label">
+        <layoutData xsi:type="swt.layouts:GridLayoutData"/>
+      </controls>
+      <controls xsi:type="tm.widgets:Text" name="aText" text="A text">
+        <layoutData xsi:type="swt.layouts:GridLayoutData" horizontalSpan="2"/>
+      </controls>
+      <controls xsi:type="tm.widgets:PushButton" name="aPushButton" text="A push button">
+        <layoutData xsi:type="swt.layouts:GridLayoutData" horizontalSpan="2"/>
+      </controls>
+      <controls xsi:type="swt.widgets:Slider" name="aSlider" maximum="10" value="5">
+        <layoutData xsi:type="swt.layouts:GridLayoutData"/>
+      </controls>
+      <layout xsi:type="swt.layouts:GridLayout" numColumns="3"/>
+    </controls>
+    <controls xsi:type="tm.widgets:Tab" name="formLayout" text="FormLayout">
+      <controls xsi:type="tm.widgets:Label" name="formLabel" text="Form label">
+        <layoutData xsi:type="swt.layouts:FormLayoutData">
+          <left numerator="5" denominator="100" offset="10"/>
+        </layoutData>
+      </controls>
+      <controls xsi:type="tm.widgets:Text" name="aText" text="A text">
+        <layoutData xsi:type="swt.layouts:FormLayoutData">
+          <left numerator="100" denominator="100" offset="10" control="//@controls.0/@controls.2/@controls.0"/>
+          <right numerator="100" denominator="100" offset="-5"/>
+        </layoutData>
+      </controls>
+      <controls xsi:type="tm.widgets:PushButton" name="formPushButton" text="A push button">
+        <layoutData xsi:type="swt.layouts:FormLayoutData">
+          <left numerator="5" denominator="100" offset="20"/>
+          <top numerator="100" denominator="100" offset="20" control="//@controls.0/@controls.2/@controls.0"/>
+        </layoutData>
+      </controls>
+      <controls xsi:type="swt.widgets:Slider" name="aSlider" maximum="10" value="5">
+        <layoutData xsi:type="swt.layouts:FormLayoutData">
+          <left numerator="5" denominator="100" offset="20" control="//@controls.0/@controls.2/@controls.2"/>
+          <top numerator="100" denominator="100" offset="30" control="//@controls.0/@controls.2/@controls.0"/>
+        </layoutData>
+      </controls>
+      <layout xsi:type="swt.layouts:FormLayout"/>
+    </controls>
+  </controls>
+</tm.widgets:Composite>

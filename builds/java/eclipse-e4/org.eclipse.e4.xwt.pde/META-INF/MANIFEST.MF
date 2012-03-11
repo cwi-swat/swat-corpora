@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name.0
+Bundle-SymbolicName: org.eclipse.e4.xwt.pde;singleton:=true
+Bundle-Version: 0.9.1.qualifier
+Bundle-Activator: org.eclipse.e4.xwt.pde.PDEPlugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.e4.xwt;bundle-version="0.9.0",
+ org.eclipse.core.databinding;bundle-version="1.1.0",
+ org.eclipse.jface.databinding;bundle-version="1.4.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.e4.xwt.pde,
+ org.eclipse.e4.xwt.pde.ui,
+ org.eclipse.e4.xwt.pde.ui.views
+Bundle-Vendor: %Bundle-Vendor.0
+Bundle-Localization: plugin
+

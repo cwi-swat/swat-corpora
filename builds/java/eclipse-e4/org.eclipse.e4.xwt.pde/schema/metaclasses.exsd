@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="org.eclipse.e4.xwt.pde" xmlns="http://www.w3.org/2001/XMLSchema">
+	<annotation>
+		<appinfo>
+         <meta.schema plugin="org.eclipse.e4.xwt.pde" id="metaclasses"
+			name="metaclasses" />
+      </appinfo>
+		<documentation>
+         This extension point is used to register a metaclass in XWT Framework
+      </documentation>
+	</annotation>
+	<element name="extension">
+		<annotation>
+			<appinfo>
+            <meta.element />
+         </appinfo>
+		</annotation>
+		<complexType>
+			<sequence>
+				<element ref="metaclass" minOccurs="0" maxOccurs="unbounded" />
+			</sequence>
+			<attribute name="point" type="string" use="required">
+				<annotation>
+					<documentation>
+                  
+               </documentation>
+				</annotation>
+			</attribute>
+			<attribute name="id" type="string">
+				<annotation>
+					<documentation>
+                  
+               </documentation>
+				</annotation>
+			</attribute>
+			<attribute name="name" type="string">
+				<annotation>
+					<documentation>
+                  
+               </documentation>
+					<appinfo>
+                  <meta.attribute translatable="true" />
+               </appinfo>
+				</annotation>
+			</attribute>
+		</complexType>
+	</element>
+	<element name="metaclass">
+		<annotation>
+			<documentation>
+            A metaclass
+         </documentation>
+		</annotation>
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="property" minOccurs="0" maxOccurs="unbounded" />
+			</choice>
+			<attribute name="type" type="string" use="required">
+				<annotation>
+					<documentation>
+                  The Java type
+               </documentation>
+					<appinfo>
+                  <meta.attribute kind="java" />
+               </appinfo>
+				</annotation>
+			</attribute>
+		</complexType>
+	</element>
+	<element name="property">
+		<annotation>
+			<documentation>
+            property in UI element
+         </documentation>
+		</annotation>
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element ref="SetPostAction" minOccurs="0" maxOccurs="unbounded" />
+			</choice>
+			<attribute name="name" type="string" use="required">
+				<annotation>
+					<documentation>
+                  
+               </documentation>
+				</annotation>
+			</attribute>
+			<attribute name="class" type="string">
+				<annotation>
+					<documentation>
+                  
+               </documentation>
+					<appinfo>
+                  <meta.attribute kind="java"
+						basedOn=":org.eclipse.e4.xwt.metadata.IProperty" />
+               </appinfo>
+				</annotation>
+			</attribute>
+			<attribute name="type" type="string">
+				<annotation>
+					<documentation>
+                  
+               </documentation>
+					<appinfo>
+                  <meta.attribute kind="java" />
+               </appinfo>
+				</annotation>
+			</attribute>
+			<attribute name="amount" use="default" value="single">
+				<annotation>
+					<documentation>
+                  If you want to register an array property, select the &quot;array&quot;, otherwise use the &quot;single&quot;.
+               </documentation>
+            </annotation>
+            <simpleType>
+               <restriction base="string">
+                  <enumeration value="single">
+                  </enumeration>
+                  <enumeration value="array">
+                  </enumeration>
+               </restriction>
+            </simpleType>
+         </attribute>
+         <attribute name="overwrite" type="boolean" use="default" value="false">
+            <annotation>
+               <documentation>
+                  If you want to overwrite the property, set true
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="event">
+      <annotation>
+         <documentation>
+            Event in UI element
+         </documentation>
+      </annotation>
+      <complexType>
+         <attribute name="name" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="java" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java" basedOn=":org.eclipse.e4.xwt.metadata.IEvent"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="SetPostAction">
+      <complexType>
+         <attribute name="SetPostActionName" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute kind="java"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         [Enter extension point usage example here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiinfo"/>
+      </appinfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+
+</schema>

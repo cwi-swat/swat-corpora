@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.1"?>
+
+<plugin>
+   <extension-point id="postProcessor" name="Post Processor" schema="schema/postProcessor.exsd"/>
+
+	<extension point="org.eclipse.core.contenttype.contentTypes">
+		<file-association
+			content-type="org.eclipse.emf.ecore.xmi"
+			file-extensions="tm"
+		/>
+	</extension>
+	
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Toolkit Model"
+            id="org.eclipse.e4.tm.ui"
+            >
+      </category>
+
+      <view id="org.eclipse.e4.tm.ui.EditorModelView"
+            name="TM Preview"
+            category="org.eclipse.e4.tm.ui"
+            class="org.eclipse.e4.tm.ui.EditorModelView"
+            >
+      </view>
+
+      <view id="org.eclipse.e4.tm.ui.EcorePaletteView"
+            name="TM Palette"
+            category="org.eclipse.e4.tm.ui"
+            class="org.eclipse.e4.tm.ui.EcorePaletteView"
+            >
+      </view>
+
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+      		id="org.eclipse.e4.tm.ui.editor"
+            class="org.eclipse.e4.tm.ui.editor.TmEcoreEditor"
+            contributorClass="org.eclipse.emf.ecore.presentation.EcoreActionBarContributor$Reflective"
+            default="false"
+            extensions="xmi,tm"
+            name="Toolkit Model Editor">
+         <contentTypeBinding contentTypeId="org.eclipse.emf.ecore.xmi"/>
+      </editor>
+   </extension>
+
+	<extension point="org.eclipse.e4.tm.ui.postProcessor">
+		<postProcessor postProcessorClass="org.eclipse.e4.tm.ui.javascript.JavascriptPostProcessor"/>
+<!--
+		<postProcessor postProcessorClass="org.eclipse.e4.tm.ui.css.CssPostProcessor"/>
+-->
+	</extension>
+
+	<extension 	point="org.eclipse.core.resources.natures"
+   		id="TmNature"
+	   	name="Toolkit Model Nature">
+      	<runtime>
+         	<run class="org.eclipse.e4.tm.ui.builders.TmNature"/> 
+     	</runtime> 
+    	<builder id="org.eclipse.e4.tm.ui.JavascriptBuilder"/> 
+   </extension> 
+
+   <extension point="org.eclipse.core.resources.builders" 
+   		id="JavascriptBuilder" 
+   		name="Javascript Builder"> 
+      	<builder hasNature="true"> 
+        	<run class="org.eclipse.e4.tm.ui.builders.JavascriptBuilder"/>
+      	</builder> 
+   	</extension>
+
+</plugin>

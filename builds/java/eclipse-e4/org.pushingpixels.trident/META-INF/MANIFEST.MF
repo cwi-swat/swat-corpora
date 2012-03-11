@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Trident
+Bundle-SymbolicName: org.pushingpixels.trident
+Bundle-Version: 1.2.0.qualifier
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.swt;bundle-version="3.5.0"
+Export-Package: org.pushingpixels.trident,
+ org.pushingpixels.trident.callback,
+ org.pushingpixels.trident.ease,
+ org.pushingpixels.trident.interpolator,
+ org.pushingpixels.trident.swt

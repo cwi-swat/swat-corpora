@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name.0
+Bundle-SymbolicName: org.eclipse.e4.xwt.springframework
+Bundle-Version: 0.9.1.qualifier
+Bundle-Activator: org.eclipse.e4.xwt.springframework.internal.Activator
+Import-Package: org.eclipse.core.runtime,
+ org.eclipse.osgi.service.debug,
+ org.osgi.framework,
+ org.osgi.util.tracker
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: org.eclipse.e4.xwt.springframework,
+ org.eclipse.e4.xwt.springframework.internal.utils
+Require-Bundle: org.eclipse.e4.xwt;bundle-version="0.9.1"
+Bundle-Vendor: %Bundle-Vendor.0
+Bundle-Localization: plugin
+Bundle-ActivationPolicy: lazy

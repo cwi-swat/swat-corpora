@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" name="palette" size="793,443" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#/" metadata="emf-1.0" initialized="true" tag="100" key="32303037303533312D313030206F72672E65636C697073652E65342E7877742E746F6F6C732E75692E70616C65747465">
+  <children xsi:type="editmodel:EnumerationEditModel" name="ContextType" location="555,30" size="147,161" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//ContextType">
+    <children xsi:type="editmodel:CompartmentEditModel" size="124,108">
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="none" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//ContextType/none">
+        <model href="palette.ecore#//ContextType/none"/>
+      </children>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="xml_attribute_value" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//ContextType/xml_attribute_value">
+        <model href="palette.ecore#//ContextType/xml_attribute_value"/>
+      </children>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="xml_attribute" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//ContextType/xml_attribute">
+        <model href="palette.ecore#//ContextType/xml_attribute"/>
+      </children>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="xml_all" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//ContextType/xml_all">
+        <model href="palette.ecore#//ContextType/xml_all"/>
+      </children>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="xml_new" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//ContextType/xml_new">
+        <model href="palette.ecore#//ContextType/xml_new"/>
+      </children>
+      <children xsi:type="editmodel:EnumerationLiteralEditModel" name="xml_tag" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//ContextType/xml_tag">
+        <model href="palette.ecore#//ContextType/xml_tag"/>
+      </children>
+    </children>
+    <model href="palette.ecore#//ContextType"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Entry" location="90,23" size="144,183" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry" runTimeClassModel="toolTip,context,icon,scope,visible,content,largeIcon,typeURI,name,id">
+    <children xsi:type="editmodel:CompartmentEditModel" size="121,162">
+      <children xsi:type="editmodel:AttributeEditModel" name="content" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/content">
+        <model href="palette.ecore#//Entry/content"/>
+      </children>
+      <children xsi:type="editmodel:AttributeEditModel" name="context" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/context">
+        <model href="palette.ecore#//Entry/context"/>
+      </children>
+      <children xsi:type="editmodel:AttributeEditModel" name="icon" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/icon">
+        <model href="palette.ecore#//Entry/icon"/>
+      </children>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/id">
+        <model href="palette.ecore#//Entry/id"/>
+      </children>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/name">
+        <model href="palette.ecore#//Entry/name"/>
+      </children>
+      <children xsi:type="editmodel:AttributeEditModel" name="scope" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/scope">
+        <model href="palette.ecore#//Entry/scope"/>
+      </children>
+      <children xsi:type="editmodel:AttributeEditModel" name="toolTip" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/toolTip">
+        <model href="palette.ecore#//Entry/toolTip"/>
+      </children>
+      <children xsi:type="editmodel:AttributeEditModel" name="visible" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/visible">
+        <model href="palette.ecore#//Entry/visible"/>
+      </children>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" source="//@children.1" target="//@children.3" targetEnd="//@children.1/@sourceConnections.0/@children.1" sourceEnd="//@children.1/@sourceConnections.0/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="144,87" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="type" location="0,87" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/type" multiplicityLabel="//@children.1/@sourceConnections.0/@children.1/@children.1" roleLabel="//@children.1/@sourceConnections.0/@children.1/@children.0" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name="type" location="332,89" size="21,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="335,117" size="18,14" anchorKind="LastPart"/>
+        <model href="palette.ecore#//Entry/type"/>
+      </children>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:AssociationEditModel" autoLocated="true" source="//@children.1" target="//@children.4" targetEnd="//@children.1/@sourceConnections.1/@children.1" sourceEnd="//@children.1/@sourceConnections.1/@children.0" connectionRouterKind="Manhattan">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="72,183" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" name="initializer" location="51,0" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Entry/initializer" multiplicityLabel="//@children.1/@sourceConnections.1/@children.1/@children.1" roleLabel="//@children.1/@sourceConnections.1/@children.1/@children.0" aggregationKind="Composition" navigable="true">
+        <children xsi:type="editmodel:LabelEditModel" name="initializer" location="169,249" size="41,14" anchorKind="LastPart"/>
+        <children xsi:type="editmodel:LabelEditModel" name="0..1" location="137,249" size="18,14" anchorKind="LastPart"/>
+        <model href="palette.ecore#//Entry/initializer"/>
+      </children>
+    </sourceConnections>
+    <model href="palette.ecore#//Entry"/>
+    <classifierPreferences xsi:type="editmodel:EMFClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="Palette" location="555,210" size="108,57" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Palette" runTimeClassModel="name">
+    <children xsi:type="editmodel:CompartmentEditModel" size="85,18">
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Palette/name">
+        <model href="palette.ecore#//Palette/name"/>
+      </children>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <model href="palette.ecore#//Palette"/>
+    <classifierPreferences xsi:type="editmodel:EMFClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.0" name="EClass" location="360,23" size="158,175" id="http://www.eclipse.org/emf/2002/Ecore#//EClass">
+    <children xsi:type="editmodel:CompartmentEditModel" size="113,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="abstract" id="http://www.eclipse.org/emf/2002/Ecore#//EClass/abstract">
+        <model href="http://www.eclipse.org/emf/2002/Ecore#//EClass/abstract"/>
+      </children>
+      <children xsi:type="editmodel:AttributeEditModel" name="interface" id="http://www.eclipse.org/emf/2002/Ecore#//EClass/interface">
+        <model href="http://www.eclipse.org/emf/2002/Ecore#//EClass/interface"/>
+      </children>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="135,90">
+      <children xsi:type="editmodel:MethodEditModel" name="getEStructuralFeature" id="http://www.eclipse.org/emf/2002/Ecore#//EClass/getEStructuralFeature">
+        <model href="http://www.eclipse.org/emf/2002/Ecore#//EClass/getEStructuralFeature"/>
+      </children>
+      <children xsi:type="editmodel:MethodEditModel" name="getEStructuralFeature" id="http://www.eclipse.org/emf/2002/Ecore#//EClass/getEStructuralFeature.1">
+        <model href="http://www.eclipse.org/emf/2002/Ecore#//EClass/getEStructuralFeature.1"/>
+      </children>
+      <children xsi:type="editmodel:MethodEditModel" name="getFeatureCount" id="http://www.eclipse.org/emf/2002/Ecore#//EClass/getFeatureCount">
+        <model href="http://www.eclipse.org/emf/2002/Ecore#//EClass/getFeatureCount"/>
+      </children>
+      <children xsi:type="editmodel:MethodEditModel" name="getFeatureID" id="http://www.eclipse.org/emf/2002/Ecore#//EClass/getFeatureID">
+        <model href="http://www.eclipse.org/emf/2002/Ecore#//EClass/getFeatureID"/>
+      </children>
+      <children xsi:type="editmodel:MethodEditModel" name="isSuperTypeOf" id="http://www.eclipse.org/emf/2002/Ecore#//EClass/isSuperTypeOf">
+        <model href="http://www.eclipse.org/emf/2002/Ecore#//EClass/isSuperTypeOf"/>
+      </children>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <model href="http://www.eclipse.org/emf/2002/Ecore#//EClass"/>
+    <classifierPreferences xsi:type="editmodel:EMFClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.1/@sourceConnections.1" name="Initializer" location="111,270" size="102,67" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Initializer" runTimeClassModel=" initialize(element: EJavaObject)">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel">
+      <children xsi:type="editmodel:MethodEditModel" name="initialize" id="platform:/resource/org.eclipse.e4.xwt.tools.ui.palette/model/palette.ecore#//Initializer/initialize">
+        <model href="palette.ecore#//Initializer/initialize"/>
+      </children>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <model href="palette.ecore#//Initializer"/>
+    <classifierPreferences xsi:type="editmodel:EMFClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural"/>
+  </children>
+  <model href="palette.ecore#/"/>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=1;Product=eEmf"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:EMFClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true"/>
+</editmodel:ClassDiagramEditModel>

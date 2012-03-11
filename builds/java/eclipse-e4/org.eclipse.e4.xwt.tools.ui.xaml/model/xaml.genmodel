@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2006, 2010 Soyatec (http://www.soyatec.com) and others.&#xD;&#xA; All rights reserved. This program and the accompanying materials&#xD;&#xA; are made available under the terms of the Eclipse Public License v1.0&#xD;&#xA; which accompanies this distribution, and is available at&#xD;&#xA; http://www.eclipse.org/legal/epl-v10.html&#xD;&#xA; &#xD;&#xA; Contributors:&#xD;&#xA;     Soyatec - initial API and implementation"
+    modelDirectory="/org.eclipse.e4.xwt.tools.ui.xaml/src" creationIcons="false" modelPluginID="org.eclipse.e4.xwt.tools.ui.xaml"
+    templateDirectory="" redirection="" modelName="Xaml" modelPluginClass="" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    usedGenPackages="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.genmodel#//ecore">
+  <foreignModel>xaml.ecore</foreignModel>
+  <genPackages prefix="Xaml" basePackage="org.eclipse.e4.xwt.tools.ui" disposableProviderFactory="true"
+      ecorePackage="xaml.ecore#/">
+    <genDataTypes ecoreDataType="xaml.ecore#//Node"/>
+    <genDataTypes ecoreDataType="xaml.ecore#//Document"/>
+    <genClasses ecoreClass="xaml.ecore#//XamlDocument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//XamlDocument/rootElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//XamlDocument/declaredNamespaces"/>
+      <genOperations ecoreOperation="xaml.ecore#//XamlDocument/addDeclaredNamespace">
+        <genParameters ecoreParameter="xaml.ecore#//XamlDocument/addDeclaredNamespace/prefix"/>
+        <genParameters ecoreParameter="xaml.ecore#//XamlDocument/addDeclaredNamespace/namespace"/>
+      </genOperations>
+      <genOperations ecoreOperation="xaml.ecore#//XamlDocument/getDeclaredNamespace">
+        <genParameters ecoreParameter="xaml.ecore#//XamlDocument/getDeclaredNamespace/prefix"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="xaml.ecore#//AnnotatedObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//AnnotatedObject/annotations"/>
+      <genOperations ecoreOperation="xaml.ecore#//AnnotatedObject/getAnnotation">
+        <genParameters ecoreParameter="xaml.ecore#//AnnotatedObject/getAnnotation/source"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xaml.ecore#//XamlNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//XamlNode/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//XamlNode/prefix"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//XamlNode/namespace"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//XamlNode/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//XamlNode/childNodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//XamlNode/attributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//XamlNode/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//XamlNode/comments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//XamlNode/widget"/>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/getAttribute">
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/getAttribute/name"/>
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/getAttribute/namespace"/>
+      </genOperations>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/getAttribute.1">
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/getAttribute.1/name"/>
+      </genOperations>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/getChild">
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/getChild/name"/>
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/getChild/namespace"/>
+      </genOperations>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/getChild.1">
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/getChild.1/name"/>
+      </genOperations>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/getChild.2">
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/getChild.2/index"/>
+      </genOperations>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/getOwnerDocument"/>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/attributeNames"/>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/attributeNames.1">
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/attributeNames.1/namespace"/>
+      </genOperations>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/attributeNamespaces"/>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/getParent"/>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/generate">
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/generate/document"/>
+        <genParameters ecoreParameter="xaml.ecore#//XamlNode/generate/options"/>
+      </genOperations>
+      <genOperations ecoreOperation="xaml.ecore#//XamlNode/getFlatValue"/>
+    </genClasses>
+    <genClasses ecoreClass="xaml.ecore#//XamlElement"/>
+    <genClasses ecoreClass="xaml.ecore#//XamlAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//XamlAttribute/useFlatValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//XamlAttribute/groupName"/>
+    </genClasses>
+    <genClasses ecoreClass="xaml.ecore#//Annotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//Annotation/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//Annotation/details"/>
+    </genClasses>
+    <genClasses ecoreClass="xaml.ecore#//Comment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xaml.ecore#//Comment/content"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//Comment/prev"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xaml.ecore#//Comment/next"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

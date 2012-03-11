@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?><!--
+    Copyright (c) 2010 IBM Corporation and others.
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+   
+    Contributors:
+        IBM Corporation - initial API and implementation
+ -->
+
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.e4.xwt.ui.editor.XWTEditor"
+            contributorClass="org.eclipse.e4.xwt.ui.editor.XWTEditorContributor"
+            extensions="xwt"
+            icon="platform:/plugin/org.eclipse.e4.xwt.tools.ui/icons/full/obj16/xaml.png"
+            id="org.eclipse.e4.xwt.tools.ui.editor"
+            name="%editor.name.0">
+         <contentTypeBinding
+               contentTypeId="org.eclipse.e4.xwt.content-type">
+         </contentTypeBinding>
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            id="org.eclipse.e4.xwt.tools.ui.editor.popupmenu"
+            targetID="org.eclipse.wst.sse.ui.StructuredTextEditor.EditorContext">
+         <menu
+               id="org.eclipse.e4.xwt.tools.ui.editor.menu"
+               label="%menu.label.0"
+               path="additions">
+            <separator
+                  name="sequence">
+            </separator>
+            <separator
+                  name="class">
+            </separator>
+         </menu>
+         <action
+               class="org.eclipse.e4.xwt.vex.actions.GenerateActionDelegate"
+               icon="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/class_obj.gif"
+               id="org.eclipse.e4.xwt.tools.ui.editor.action1"
+               label="%action.label.0"
+               menubarPath="org.eclipse.e4.xwt.tools.ui.editor.menu/sequence">
+         </action>
+         <action
+               class="org.eclipse.e4.xwt.vex.actions.OpenDefinitionActionDelegate"
+               icon="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/class_obj.gif"
+               id="org.eclipse.e4.xwt.tools.ui.editor.action2"
+               label="%action.label.1"
+               menubarPath="org.eclipse.e4.xwt.tools.ui.editor.menu/sequence">
+         </action>
+      </viewerContribution>
+   </extension>
+   <extension
+         point="org.eclipse.wst.sse.ui.editorConfiguration">
+         <sourceViewerConfiguration
+			class="org.eclipse.e4.xwt.ui.editor.XWTStructuredTextViewerConfiguration"
+			target="org.eclipse.e4.xwt.content-type" />
+		<contentOutlineConfiguration
+			class="org.eclipse.e4.xwt.ui.editor.XWTContentOutlineConfiguration"
+			target="org.eclipse.e4.xwt.content-type" />
+		<documentationTextHover
+			class="org.eclipse.e4.xwt.ui.editor.XWTDocumentationTextHover"
+			target="org.eclipse.wst.xml.XML_DEFAULT" />
+		<propertySheetConfiguration
+			class="org.eclipse.e4.xwt.vex.properties.VEXPropertySheetConfiguration"
+			target="org.eclipse.e4.xwt.content-type" />
+		<provisionalConfiguration type="sourceeditingtexttools"
+			class="org.eclipse.e4.xwt.vex.provisional.VEXSourceEditingTextTools"
+			target="org.eclipse.e4.xwt.content-type" />
+		<provisionalConfiguration type="characterpairmatcher"
+			class="org.eclipse.e4.xwt.vex.text.VEXDocumentRegionEdgeMatcher"
+			target="org.eclipse.e4.xwt.content-type" />
+		<provisionalConfiguration type="structuredtextfoldingprovider"
+			class="org.eclipse.e4.xwt.vex.projection.VEXStructuredTextFoldingProvider"
+			target="org.eclipse.e4.xwt.content-type" />
+		<provisionalConfiguration
+			type="org.eclipse.jface.text.quickassist.IQuickAssistProcessor"
+			class="org.eclipse.e4.xwt.vex.contentassist.VEXQuickAssistProcessor"
+			target="org.eclipse.wst.xml.XML_DEFAULT" />
+		<provisionalDefinition type="preferencepages"
+			value="org.eclipse.wst.sse.ui.preferences.xml, org.eclipse.wst.sse.ui.preferences.xml.source, org.eclipse.wst.sse.ui.preferences.xml.templates, org.eclipse.wst.sse.ui.preferences.xml.colors"
+			target="org.eclipse.e4.xwt.content-type" />
+		<provisionalDefinition type="spellingregions"
+			value="XML_COMMENT_TEXT, XML_CONTENT, XML_DEFAULT"
+			target="org.eclipse.e4.xwt.content-type" />
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors.templates">
+         <contextType
+            name="%contextType.name.0"
+            class="org.eclipse.e4.xwt.vex.templates.VEXTemplateContextTypeXML"
+            id="org.eclipse.e4.xwt.ui.editor.contextType">
+    	 </contextType>
+      	 <include
+      		file="templates/xamldefault-templates.xml"
+      		translations="$nl$/templates/xamldefault-templates.properties">
+         </include>
+   </extension>
+   <extension
+         id="org.eclipse.xwt.tools.ui.editor.problemchecker"
+         point="org.eclipse.e4.xwt.vex.problemChecker">
+      <checker
+            class="org.eclipse.e4.xwt.ui.editor.checkers.ElementEventsChecker">
+      </checker>
+      <checker
+            class="org.eclipse.e4.xwt.ui.editor.checkers.ElementNameChecker">
+      </checker>
+      <checker
+            class="org.eclipse.e4.xwt.ui.editor.checkers.ElementPropertiesChecker">
+      </checker>
+      <checker
+            class="org.eclipse.e4.xwt.ui.editor.checkers.IntegerPropertyChecker">
+      </checker>
+   </extension>
+   <extension
+         id="org.eclipse.e4.xwt.vex.palettePath"
+         point="org.eclipse.e4.xwt.vex.palettePath">
+      <file
+            iconsPath="icons/clcl16/"
+            path="tools/toolkit.toolpalette">
+      </file>
+   </extension>
+</plugin>
